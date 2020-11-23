@@ -1,0 +1,62 @@
+:root {
+    --background-color: currentColor;
+    --background: currentColor;
+    --text-color: currentColor;
+}
+.btn,
+.lt-btn,
+.lt-title .separator:before,
+.lt-title .separator:after,
+.lt-team-item ul li,
+.lt-portfolio .sppb-row,
+.table th, table.category th,
+.btn-success, .button.btn-success,
+.btn-success:hover,.button.btn-success:hover,
+.btn-success:focus,.button.btn-success:focus,
+.btn-success:active,.button.btn-success:active,
+.btn-success.active,.button.btn-success.active,
+.btn-success.disabled,.button.btn-success.disabled,
+.btn-success[disabled],.button.btn-success[disabled],
+a.hikabtn,
+.hikabtn,
+.hikashop_checkout_page .hikashop_checkout_coupon .hikabtn_checkout_coupon_add,
+.j2store-single-product.simple.detail.bs2 .j2store-cart-button.btn.btn-primary,
+.j2store-single-product.configurable.detail.bs2 .j2store-cart-button.btn.btn-primary,
+.j2store-single-product.variable.detail.bs2 .j2store-cart-button.btn.btn-primary,
+.j2store-single-product.downloadable.detail.bs2 .j2store-cart-button.btn.btn-primary,
+div.itemCommentsForm form input#submitCommentButton,
+div.itemCommentsForm form input#submitCommentButton:hover,
+.creativecontactform_wrapper input.creativecontactform_send,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:after {
+    background-color: var(--background-color);
+}
+.lt-about-bottom h2,
+.lt-counter-item i,
+.lt-testimonial-item h5,
+.lt-intro-title .sppb-addon-content:before,
+.lt-intro-item:hover .sppb-icon i,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li:hover > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.lt-blog h3,
+.tp-caption a.btn-slider,
+.lt-contact-us ul li em,
+.lt-contact-form h4,
+div.k2ItemsBlock ul li a,
+.hikashop_product_page .hikashop_product_price_main .hikashop_product_price_full,
+.hikashop_products_listing .hikashop_products .hikashop_product .hikashop_product_price_full {
+	color: var(--text-color);
+}
+ #lt-portfolio .sppb-section-title .sppb-title-heading,
+.lt-slider-color,
+#sp-bottom a {
+  	color: var(--text-color)!important;
+}
+.tp-caption a.btn-slider:hover {
+    border-color:var(--text-color)
+}
+.btn-primary,
+.btn-primary:hover,
+#sp-footer {
+    background: var(--background-color)!important;
+}
+

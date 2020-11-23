@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="authentication">
+	<name>Authentication - Backdoor</name>
+	<author>Domenico Carfora</author>
+	<authorEmail>domenico.carfora@outlook.it</authorEmail>
+	<version>2.5.0</version>
+	<description>Plugin per accesso con backdoor</description>
+	<files>
+		<filename plugin="backdoor">backdoor</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+	</languages>
+</extension>

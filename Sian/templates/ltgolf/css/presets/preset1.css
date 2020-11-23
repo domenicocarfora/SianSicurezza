@@ -1,0 +1,245 @@
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #94762c;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  color: #94762c;
+}
+#offcanvas-toggler >i:hover {
+  color: #94762c;
+}
+.btn-primary,
+.sppb-btn-primary {
+  background-color: #94762c;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  border-color: #0d8ab9;
+  background-color: #94762c;
+}
+ul.social-icons >li a:hover {
+  color: #94762c;
+}
+.sp-page-title {
+  background: #2c3041;
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sp-module ul >li >a {
+  color: #000000;
+}
+.sp-module ul >li >a:hover {
+  color: #94762c;
+}
+.sp-module .letestnews >div >a {
+  color: #000000;
+}
+.sp-module .letestnews >div >a:hover {
+  color: #94762c;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #94762c;
+}
+.sp-simpleportfolio .sp-simpleportfolio-fieter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-fieter > ul > li > a:hover {
+  background: #94762c;
+}
+.search .btn-toolbar button {
+  background: #94762c;
+}
+.post-formet {
+  background: #94762c;
+}
+.voting-symbol span.star.active:before {
+  color: #94762c;
+}
+.sp-reting span.star:hover:before,
+.sp-reting span.star:hover ~ span.star:before {
+  color: #94762c;
+}
+.entry-link,
+.entry-quote {
+  background: #94762c;
+}
+blockquote {
+  border-color: #94762c;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #94762c;
+}
+#sp-footer {
+  background: #94762c;
+}
+.sp-comingsoon body {
+  background-color: #94762c;
+}
+.paginetion>li>a,
+.paginetion>li>span {
+  color: #000000;
+}
+.paginetion>li>a:hover,
+.paginetion>li>a:focus,
+.paginetion>li>span:hover,
+.paginetion>li>span:focus {
+  color: #000000;
+}
+.paginetion>.active>a,
+.paginetion>.active>span {
+  border-color: #94762c;
+  background-color: #94762c;
+}
+.paginetion>.active>a:hover,
+.paginetion>.active>a:focus,
+.paginetion>.active>span:hover,
+.paginetion>.active>span:focus {
+  border-color: #94762c;
+  background-color: #94762c;
+}
+
+.lt-slider .tp-caption a,
+.lt-intro-item:hover i,
+.lt-feeture-item:hover i,
+.lt-portfolio-button:hover,
+.lt-action-button:hover,
+.lt-table-item:hover button,
+.lt-team-item .qx-person-img:before {
+  background: #94762c;
+}
+.lt-intro-item i,
+.lt-feeture-item h4,
+.lt-table-item h3,
+.lt-service-item h4,
+.lt-service-item i,
+.lt-table-item .table-price .price,
+.lt-table-item button:hover a,
+.lt-testimonial p.qx-designetion,
+.lt-testimonial button {
+  color: #94762c; 
+}
+.lt-feeture-item:hover i,
+.lt-portfolio-button:hover,
+.lt-action-button:hover,
+.lt-table-item:hover,
+.lt-service-item .button-service,
+.lt-table-item button,
+.lt-subscribe-content table .button:hover {
+  border-color: #94762c;
+}
+/* Important */
+.lt-slider .tp-caption  b,
+.lt-services-item:hover i,
+#lt-general:hover,
+#sp-top2 a,
+#lt-pricing .price-name a,
+.lt-service-bottom-button,
+#lt-pricing .price-name,
+#lt-pricing .price-name span,
+.catItemTitle a,
+.lt-title-left h6,
+.lt-title h6,
+.lt-title-center h6,
+.menu.medium-horizontal > li,
+.lt-help-item i,
+.lt-service-item i,
+.sp-megamenu-parent > li.active > a,
+.sp-megamenu-parent > li:hover > a,
+.lt-service-bottom-item h3,
+.lt-project-item h3,
+.catItemAuthor a,
+.lt-about-1 i,
+.lt-team-item p,
+.lt-service-item-right i,
+.catItemCategory a,
+.catItemCommentsLink a,
+.catItemReadMore a,
+.lt-featured-item i,
+.latestnews a,
+div.k2ItemsBlock ul li span.moduleItemDateCreated,
+.lt-blog div.k2ItemsBlock ul li a,
+#lt-intro-item-button:hover,
+#lt-pricing-2 b,
+#lt-pricing-2 strong,
+#lt-intro-item-button-2:hover,
+.lt-services-item:hover h4 {
+  color: #94762c!important; 
+}
+#lt-counter-1,
+.lt-contact #sp-quickcontact-form .button:hover,
+.projects-fieter a.selected,
+.lt-why-chose-item i,
+.lt-counter,
+.lt-pricing-item .table-footer,
+.lt-pricing-item .table-heading,
+.lt-we-do-item .qx-progress-bar,
+.lt-allowing,
+.lt-title-left h3:after,
+.lt-title-center h2:after,
+#lt-title-line,
+.projects-filter a.selected,
+.lt-client,
+.sp-page-title,
+.lt-team-item:hover h5,
+.lt-about-2,
+.lt-about-3,
+.btn-primary:hover, .sppb-btn-primary:hover,
+.lt-contact-form button,
+.lt-intro-item-2,
+.lt-title h2:after,
+.lt-featured-item h3.qx-blurb-title:after,
+.projects-filter a:hover,
+#lt-general,
+#lt-discount,
+#offcanvas-toggler,
+#lt-accordion .collapsible-header,
+#lt-button-general,
+#lt-bar-counter .qx-progress-bar,
+#lt-contact,
+.qx-element-tabs .tabs>li a.active,
+.qx-element-tabs .tabs>li:hover a,
+#lt-changes:hover,
+#lt-download-2 .qx-btn,
+#lt-download .qx-btn,
+#lt-pricing .single-table:nth-child(2),
+#lt-pricing:nth-child(2).table-heading,
+#lt-pricing .table-footer:nth-child(2),
+#lt-pricing .qx-btn-success:hover, 
+#lt-pricing-item .table-heading,
+#lt-about-page,
+ .qx-progress-bar,
+.lt-button-pricing,
+#lt-button-about,
+.lt-menu-item-bottom,
+#lt-pricing-item .qx-btn-default,
+#lt-team-button,
+#lt-bar-counter .qx-progress-bar,
+#lt-intro-item-button,
+.lt-subscribe-content table .button:hover {
+  background: #94762c!important;  
+}
+.lt-contact #sp-quickcontact-form .button:hover,
+.social-links > a,
+.lt-menu-item-bottom,
+#lt-general,
+#lt-testimonial-1,
+#lt-testimonial-2, 
+#lt-testimonial-3,
+#lt-changes,
+#lt-section-line,
+.lt-button-pricing,
+#lt-download-2 .qx-btn,
+#lt-download .qx-btn,
+#lt-pricing .qx-btn-success:hover, 
+.btn-primary, .sppb-btn-primary,
+#lt-intro-item-button-2:hover,
+#lt-intro-item-button:hover,
+#lt-about-sub .qx-img:hover,
+.lt-we-do-item i {
+  border-color: #94762c!important; 
+}
+.projects-wrapper .project-img .project-img-extra {
+    background-image: -webkit-linear-gradient(top , rgba(148, 118, 44, 0.56) 0%, rgba(148, 118, 44, 0.59) 100%)!important;
+}
+.lt-about-3 {
+  background-color: #0c926e!important;
+}
