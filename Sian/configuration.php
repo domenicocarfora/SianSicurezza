@@ -95,7 +95,7 @@ class JConfig {
 	public $session_redis_server_port = '6379';
 	public $session_redis_server_auth = '';
 	public $session_redis_server_db = '0';
-	public $frontediting = '1';
+	public $frontediting = '0';
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';

@@ -1,0 +1,12 @@
+## FWR srl
+# inviare le richieste API ad api/index.php
+Options +FollowSymLinks
+RewriteEngine On
+
+SetEnv HTTPS on
+
+# QUESTE DUE REGOLE SONO DA ABILITARE PER ATTIVARE IL REDIRECT HTTPS. NOTA: IN CASO DI UTILIZZO MOODLE GESTIRE REDIRECT HTTPS IN MODO DIFFERENTE
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule .* index.php [L]

@@ -20,6 +20,8 @@ class BlankComponentViewDefault extends JViewLegacy
 			$menu_params = new JRegistry;
 			//$menu_params->loadJSON($menu->params);
             //var_dump($params->get('page_title'));exit();
+            //risolto errore blank component per prendere il nome della pagina
+            //if (!$menu_params->get('page_title')) {
 			if (!$params->get('page_title')) {
 				$params->set('page_title',	JText::_('Blank Component'));
 			}

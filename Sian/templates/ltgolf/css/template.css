@@ -25,6 +25,17 @@
   color: #999;
   opacity: 1;
 }
+
+.modal-backdrop {
+  position: unset;
+}
+
+.panel{
+  background-color: transparent;
+  position: absolute!important;
+  z-index: 99999;
+}
+
 .form-control:-ms-input-placeholder {
   color: #999;
 }
@@ -859,6 +870,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
   display: none;
 }
 .sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+  display: table-row-group;
   background: #ffffff;
   box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
   padding: 20px;
@@ -1302,6 +1314,10 @@ dl.article-info dd.hits span[class*=" icon-"] {
   background: transparent none repeat scroll 0 0;
   box-shadow: none;
   padding: 0;
+}
+
+.element-image{
+  margin-right: 20%!important;
 }
 .menu-twist .sp-has-child .sp-dropdown-items {
   margin: 0;
@@ -1778,7 +1794,11 @@ img {
   height: auto;
 }
 #sp-header .logo img {
-  max-width: 75%!important;
+  max-width: 60%!important;
+}
+
+.imgcarrello{
+  max-width: 30px;
 }
 
 .btn,
@@ -3465,4 +3485,4 @@ table.category tbody >tr td {
 /* Coming Soon Page */
 .comingsoon-page-logo img:nth-child(2) {
  display: none;
-}
+}}
