@@ -31,8 +31,8 @@ class JConfig {
 	public $ftp_enable = '0';
 	public $offset = 'UTC';
 	public $mailonline = '1';
-	public $mailer = 'mail';
-	public $mailfrom = 'domenico.carfora@outlook.it';
+	public $mailer = 'smtp';
+	public $mailfrom = 'carforadomenico94@gmail.com';
 	public $fromname = 'Sian Sicurezza';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';

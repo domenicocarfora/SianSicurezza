@@ -47,7 +47,9 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
         $uid=Factory::getUser()->id;
         $cid=(int) Factory::getApplication()->input->get('Itemid');
         $quantita=(int) Factory::getApplication()->input->get('quantita');
-        if (!empty($uid) && !empty($cid) && !empty($quantita)) {
+        if (empty($quantita) || $quantita=='')
+        {$quantita=0;}
+        if (!empty($uid) && !empty($cid)) {
             //controllo se l'utente ha già un carrello attivo
             $db = JFactory::getDbo();
             $querycarrello="SELECT id FROM #__carrello WHERE id_user=".$uid." AND inviato=0;";
@@ -94,16 +96,16 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
             $queryitemcarrello="SELECT zi.name,cp.quantita,cp.id_prodotto,cp.id_carrello FROM #__zoo_item zi
                 JOIN #__carrello_prodotto cp ON zi.id=cp.id_prodotto
                 JOIN #__carrello c ON cp.id_carrello=c.id 
-                WHERE c.id=$id_carrello AND c.id_user=".$uid;
+                WHERE cp.quantita<>0 and c.id=$id_carrello AND c.id_user=".$uid;
 
             $db->setQuery($queryitemcarrello);
             $itemcarrello = $db->loadObjectList();
 
             $this->sendcarrello($itemcarrello);
 
-            $query = "UPDATE #__carrello SET inviato=1 AND data_invio='".date('d-m-Y')."' WHERE id=$id_carrello;";
+            $query = "UPDATE #__carrello SET inviato=1, data_invio='".date('Y-m-d')."' WHERE id=$id_carrello;";
             $db->setQuery($query);
-            $db->execute();
+            //$db->execute();
             if ($db->getErrorNum()) {
                 echo json_encode(array(
                     "success" => false,
@@ -220,11 +222,16 @@ public function sendcarrello($itemcarrello){
     $mail->SMTPAuth = true;
     $mail->isHTML(true);
     $mail->setSender($sender);
-    $to=explode(";", "domenicocarfora@outlook.it");
+    $to=explode(";", "domenico.carfora@outlook.it");
     $mail->addRecipient($to);
     $mail->setBody($body);
     $mail->setSubject("Richiesta preventivo");
-    return $mail->send();
+    try {
+        $send = $mail->Send();
+        var_dump($send);exit();
+    } catch (Exception $e) {
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
 }
 
 }
