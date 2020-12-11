@@ -130,6 +130,7 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
    public function addItem(){
 	    $uid=Factory::getUser()->id;
 	    $cid=(int) Factory::getApplication()->input->get('Itemid');
+       $quantita=(int) Factory::getApplication()->input->get('quantita');
         if (!empty($uid) && !empty($cid)) {
             //controllo se l'utente ha già un carrello attivo
             $db = JFactory::getDbo();
@@ -144,7 +145,7 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
                 $id_carrello=$db->loadResult($query);
             }
 
-            $query = "INSERT INTO #__carrello_prodotto (id_prodotto,id_carrello,quantita) VALUES($cid,$id_carrello,1) ON DUPLICATE KEY UPDATE quantita = quantita + 1;";
+            $query = "INSERT INTO #__carrello_prodotto (id_prodotto,id_carrello,quantita) VALUES($cid,$id_carrello,$quantita) ON DUPLICATE KEY UPDATE quantita = quantita + $quantita;";
             $db->setQuery($query);
             $db->execute();
             if ($db->getErrorNum()) {

@@ -1316,6 +1316,11 @@ dl.article-info dd.hits span[class*=" icon-"] {
   padding: 0;
 }
 
+#aggiungicarrello{
+  width: 200px;
+  height: 30px;
+}
+
 .element-image{
   margin-right: 20%!important;
 }

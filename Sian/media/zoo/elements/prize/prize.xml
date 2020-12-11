@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<element type="prize" group="Media" orderable="true">
+	<name>Show Prize</name>
+	<author></author>
+	<creationDate>Dicembre 2020</creationDate>
+	<copyright>Copyright (C) YOOtheme GmbH</copyright>
+	<version>1.0.0</version>
+	<description>Show prize item</description>
+	<params>
+		
+	</params>
+</element>

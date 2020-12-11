@@ -8974,6 +8974,11 @@ input:focus,
 .js-pstats-data-details dd {
 	margin-left: 240px;
 }
+
+#content > div > div > div.row-fluid > div.span3 > div > div:nth-child(1) > div{
+	display: none;
+}
+
 .js-pstats-data-details dt {
 	width: 220px;
 }
