@@ -8,7 +8,7 @@ defined('_JEXEC') or die;
                 echo "<div><table>
         <tr><td>Nome prodotto</td><td>Quantità</td><td>Opzioni</td></tr>";
                 foreach ($carrello as $item){
-                    echo "<tr id='shopitem-".$item->id_prodotto."'><td><span>".$item->name."</span></td>   <td><span> <input data-id_prod=".$item->id_prodotto." value=".$item->quantita." type='number' id='quantity' name='quantity'></span> </td>  <td><span><button type=button class=remove aria-label=rimuovi data-id='".$item->id_prodotto."'> X </button></span></td></li>";
+                    echo "<tr id='shopitem-".$item->id_prodotto."'><td><span>".$item->name."</span></td>   <td><span> <input data-id_prod=".$item->id_prodotto." value=".$item->quantita." type='number' id='quantity' name='quantity'/></span> </td>  <td><span><button type=button class=remove aria-label=rimuovi data-id='".$item->id_prodotto."'> X </button></span></td></li>";
                 };
                 echo "</ul></div>";
             }else{

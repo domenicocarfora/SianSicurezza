@@ -14,7 +14,6 @@ $doc->addScript(JURI::root()."modules/mod_category_everywhere/assets/js/script.j
 // $width 			= $params->get("width");
 
 $categorie = modCategoryEverywhereHelper::getCategories($params);
-//var_dump($params);exit();
 if ($params->get('tutte')=='1'){
     require JModuleHelper::getLayoutPath('mod_category_everywhere', $params->get('layout', 'categorie'));
 } else {
