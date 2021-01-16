@@ -43,7 +43,9 @@ class ElementAddcarrello extends Element {
 	       String - html
 	*/
     public function edit() {
-        return true;
+        if (!empty($this->_item)) {
+            return $this->app->html->_('select.booleanlist', $this->getControlName('value'), $this->get('value'),true);
+        }
     }
 
 
@@ -59,6 +61,7 @@ class ElementAddcarrello extends Element {
     */
 	public function render($params = array()) {
         if (!empty($this->_item)) {
+            if ($this->get('value')=='1'){
             return " <div><input type='number' id='quantitymodal' name='quantity' value='1'/><br>
  <button id='aggiungicarrello' class='btn btn-primary'>Aggiungi al carrello</button></div>
 
@@ -93,8 +96,8 @@ function addcarrello(id_prodotto,quantita){
         });
         
 </script>
-";
-         /*   return "
+";/*
+            return "
 <span id='aggiungicarrello'><a class='btn btn-primary' href='#modaladd' role='button' data-toggle='modal'>Aggiungi al carrello</a></span>
 <div id='modaladd' class='panel' style='display: none;'>
 <div class='modal-content'>
@@ -139,6 +142,9 @@ function addcarrello(id_prodotto,quantita){
 </script>
 "; */
 
+        }else{
+                return "<div id='nondisponibile'>Prodotto attualmente non disponibile</div>";
+            }
         }
 	}
 
