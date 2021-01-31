@@ -1323,12 +1323,18 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .prodotto_immagine{
   width: 150px;
 }
+.hp_prodotto_immagine{
+  width: 150px;
+}
 .pos-content{
   width: 200px;
 }
 
 .element-image{
   margin-right: 20%!important;
+}
+.filter{
+  margin: 0.5%;
 }
 .menu-twist .sp-has-child .sp-dropdown-items {
   margin: 0;

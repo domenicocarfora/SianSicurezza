@@ -5,14 +5,9 @@ class modItemEverywhereHelper{
         $db = JFactory::getDBO();
         $query="SELECT DISTINCT jzi.id,jzi.name,jzi.alias,
                 REPLACE(JSON_EXTRACT(JSON_EXTRACT(jzi.elements,'$.\"c26feca6-b2d4-47eb-a74d-b067aaae5b90\"'),'$.\"file\"'),'\"','') as immagine,
-                REPLACE(JSON_EXTRACT(JSON_EXTRACT(JSON_EXTRACT(elements,'$.\"08795744-c2dc-4a68-8252-4e21c4c4c774\"'),'$.\"0\"'),'$.\"value\"'),'\"','') as sottotitolo,
-                jzci.category_id as primary_category,
-                jzc.name as name_primary_cat,
-                jzc.alias as alias_primary_cat
+                REPLACE(JSON_EXTRACT(JSON_EXTRACT(JSON_EXTRACT(elements,'$.\"08795744-c2dc-4a68-8252-4e21c4c4c774\"'),'$.\"0\"'),'$.\"value\"'),'\"','') as sottotitolo
                 FROM #__zoo_item jzi
-                JOIN #__zoo_category_item jzci ON jzi.id=jzci.item_id
-                JOIN #__zoo_category jzc ON jzci.category_id=jzc.id
-                WHERE jzi.application_id=1 AND (publish_down IS NULL OR publish_down>sysdate()) AND jzci.category_id=".$params->get('categoria');
+                WHERE jzi.application_id=1 AND (publish_down IS NULL OR publish_down>sysdate()) ORDER BY publish_up DESC LIMIT ".(int)$params->get('limit');
         $db->setQuery($query);
         $obj = $db->loadObjectList();
         $items=array();

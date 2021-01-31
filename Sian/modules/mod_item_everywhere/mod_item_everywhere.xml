@@ -14,7 +14,7 @@
 	<copyright>Copyright © 2020 - All rights reserved.</copyright>
 	<license>GNU General Public License v2.0</license>
 	<version>1.0.0</version>
-	<description>MOD__P_MODULO_PER_VISUALIZZARE_G</description>
+	<description>Modulo per visualizzare gli item di una categoria. Se si vuole mettere il modulo in homepage non verranno considerati i campi categoria madre e filtri</description>
 	<files>
 		<filename module="mod_item_everywhere">mod_item_everywhere.php</filename>
 		<filename>mod_item_everywhere.xml</filename>
@@ -34,7 +34,6 @@
 						value_field="name"
 						default="0"
 						label="Categoria Madre"/>
-
 				<field
 						name="filtri"
 						type="sql"
@@ -45,6 +44,19 @@
 						multiple="true"
 						size="5"
 						label="Filtri Abilitati"/>
+				<field
+						name="homepage"
+						type="radio"
+						default="1"
+						label="Visualizzazione in Homepage">
+					<option value="0">Si</option>
+					<option value="1">NO</option>
+				</field>
+				<field
+						name="limit"
+						type="text"
+						default="6"
+						label="Item visualizzati in HomePage"/>
 
 			</fieldset>
 			<fieldset

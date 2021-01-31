@@ -13,5 +13,6 @@ $doc->addStyleSheet(JURI::root()."modules/mod_item_everywhere/assets/css/style.c
 $doc->addScript(JURI::root()."modules/mod_item_everywhere/assets/js/script.js");
 $filter= modItemEverywhereHelper::getFilter($params);
 $cat_madre=$params->get('categoria');
-//$items = modItemEverywhereHelper::getItem($params);
+if ($params->get('homepage')=='0'){
+$items = modItemEverywhereHelper::getItem($params);}
 require JModuleHelper::getLayoutPath('mod_item_everywhere', $params->get('layout', 'default'));

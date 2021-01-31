@@ -62,35 +62,3 @@ function getitems() {
 </script>
 
 ";
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-echo "<div class='items' id='items'>";
-//var_dump($items);exit();
-foreach ($items as $item) {
-    $url = JUri::base()."component/zoo/item/" . $item->alias;
-
-    echo "<div class='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 item-$item->id ";
-    echo "' id='item-$item->id'>";
-    echo "<a href='$url'> <span id='item_name'><h1>$item->name</h1></span>
-            <span id='item_subtitle'><h3>$item->sottotitolo</h3></span>
-            <div id='img_item'>
-            <img class='prodotto_immagine' src='".JUri::base().$item->immagine."'>
-            </div>
-
-        </a>";
-    echo "</div>";
-
-}
-
-echo "</div>";*/
