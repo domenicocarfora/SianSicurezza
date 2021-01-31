@@ -1327,7 +1327,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
   width: 150px;
 }
 .pos-content{
-  width: 200px;
+  /*width: 200px;*/
 }
 
 .element-image{
@@ -1336,6 +1336,22 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .filter{
   margin: 0.5%;
 }
+.active_user >a{
+  color: #ffffff;
+}
+.contcarrello{
+  position: absolute;
+  right: auto;
+  left: auto;
+  background: red;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  font-size: 14px;
+  top: 0px;
+  color: white;
+}
+
 .menu-twist .sp-has-child .sp-dropdown-items {
   margin: 0;
   padding: 0;
