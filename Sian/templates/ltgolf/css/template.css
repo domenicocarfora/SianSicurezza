@@ -839,7 +839,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
   display: inline-block;
   padding: 0 15px;
   line-height: 90px;
-  font-size: 14px;
+  font-size: 20px!important;
   text-transform: uppercase;
   color: #337ab7;
   margin: 0;
@@ -916,8 +916,9 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .sp-megamenu-parent .sp-dropdown li.sp-menu-item >a,
 .sp-megamenu-parent .sp-dropdown li.sp-menu-item span {
   display: block;
+  font-weight: bold;
   padding: 10px;
-  color: #141414;
+  color: #000000;
   cursor: pointer;
 }
 .sp-megamenu-parent .sp-dropdown li.sp-menu-item >a.sp-group-title,
@@ -1827,7 +1828,7 @@ img {
   height: auto;
 }
 #sp-header .logo img {
-  max-width: 60%!important;
+  max-width: 80%!important;
 }
 
 .imgcarrello{
