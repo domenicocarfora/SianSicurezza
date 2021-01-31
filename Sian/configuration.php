@@ -56,7 +56,7 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $feed_email = 'none';
+	public $feed_email = 'author';
 	public $log_path = '/var/www/html/administrator/logs';
 	public $tmp_path = '/var/www/html/tmp';
 	public $lifetime = '9999';

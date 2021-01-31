@@ -2,7 +2,7 @@
 defined('_JEXEC') or die;
 ?>
 <div class="row">
-<div class="img_partner">
+<div class="category container">
     <?php
     foreach ($categorie as $categoria){
         $parametri=json_decode($categoria->params,true);

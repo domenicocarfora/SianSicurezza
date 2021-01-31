@@ -1320,6 +1320,12 @@ dl.article-info dd.hits span[class*=" icon-"] {
   width: 200px;
   height: 30px;
 }
+.prodotto_immagine{
+  width: 150px;
+}
+.pos-content{
+  width: 200px;
+}
 
 .element-image{
   margin-right: 20%!important;

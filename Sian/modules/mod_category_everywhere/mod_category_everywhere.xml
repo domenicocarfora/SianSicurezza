@@ -29,7 +29,8 @@
 				<field
 					name="categoria"
 					type="sql"
-					query="SELECT DISTINCT a.parent as id,b.name as name FROM #__zoo_category a JOIN #__zoo_category b ON a.parent=b.id WHERE a.application_id=1"
+					query="SELECT DISTINCT a.parent as id,b.name as name FROM #__zoo_category a JOIN #__zoo_category b ON a.parent=b.id WHERE a.application_id=1
+						AND a.parent NOT IN (144,27,35,45,48,54,58,64,70,75,80,90,96,99,102,108,111,120,123,129,131);"
 					key_field="id"
 					value_field="name"
 					default="0"

@@ -65,7 +65,7 @@ class ElementAddcarrello extends Element {
             return " <div><input type='number' id='quantitymodal' name='quantity' value='1'/><br>
  <button id='aggiungicarrello' class='btn btn-primary'>Aggiungi al carrello</button></div>
 
-<script type='text/javascript'>
+<script type='application/javascript'>
 
 function addcarrello(id_prodotto,quantita){
 
