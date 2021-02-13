@@ -72,7 +72,7 @@ defined('_JEXEC') or die;
         function sendcarrello(){
 
             jQuery.ajax({
-                url: '<?php echo JURI::base() ?>index.php?option=com_carrello_api&task=sendcarrello',
+                url: '<?php echo JURI::base() ?>index.php?option=com_carrello_api&task=inviacarrello',
                 type: 'POST',
                 dataType: 'json',
                 success: function(data) {

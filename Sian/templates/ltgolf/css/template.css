@@ -15,6 +15,11 @@
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+.gammaimg{
+  width: 105px!important;
+  height: 50%!important;
+  min-width: 125px!important;
+}
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
@@ -839,7 +844,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
   display: inline-block;
   padding: 0 15px;
   line-height: 90px;
-  font-size: 20px!important;
+  font-size: 18px!important;
   text-transform: uppercase;
   color: #337ab7;
   margin: 0;
@@ -857,6 +862,9 @@ dl.article-info dd.hits span[class*=" icon-"] {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.gammaimg{
+  max-width: 80%;
 }
 .sp-megamenu-parent .sp-mega-group .sp-mega-group-child {
   list-style: none;
@@ -1340,16 +1348,24 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .active_user >a{
   color: #ffffff;
 }
+#itemcarrello{
+  width: 300px;
+  left: -200px;
+  padding-right: unset!important;
+}
+.carrello{
+  padding-top: 8px;
+}
 .contcarrello{
   position: absolute;
   right: auto;
-  left: auto;
+  left: 55px;
   background: red;
   border-radius: 50%;
   min-width: 20px;
   height: 20px;
   font-size: 14px;
-  top: 0px;
+  top: 12px;
   color: white;
 }
 
@@ -1832,7 +1848,7 @@ img {
 }
 
 .imgcarrello{
-  max-width: 30px;
+  max-width: 45px;
 }
 
 .btn,

@@ -228,8 +228,8 @@ public function sendcarrello($itemcarrello){
     $mail->setBody($body);
     $mail->setSubject("Richiesta preventivo");
     try {
-        $send = $mail->Send();
-        var_dump($send);exit();
+        $x=$mail->Send();
+        var_dump($x);exit();
     } catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
