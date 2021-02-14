@@ -15,8 +15,13 @@
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+.removebutton{
+  max-width: 10%;
+}
 .gammaimg{
+  max-width: 80%;
   width: 105px!important;
+  padding-right: 140px;
   height: 50%!important;
   min-width: 125px!important;
 }
@@ -837,7 +842,16 @@ dl.article-info dd.hits span[class*=" icon-"] {
   position: static;
 }
 .catlogo{
-  max-width: 100px;
+  max-width: 100%;
+  padding-top: 20px;
+}
+.catname{
+  font-size: 30px;
+  text-align: center;
+}
+.imgcat{
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 .sp-megamenu-parent >li >a,
 .sp-megamenu-parent >li >span {
@@ -863,9 +877,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
   padding: 0;
   margin: 0;
 }
-.gammaimg{
-  max-width: 80%;
-}
+
 .sp-megamenu-parent .sp-mega-group .sp-mega-group-child {
   list-style: none;
   padding: 0;
@@ -2278,6 +2290,7 @@ ul.social-icons >li a {
     height: 300px;
   }
 }
+
 .sp-module {
   margin-top: 50px;
 }
@@ -3457,6 +3470,7 @@ table.category tbody >tr td {
     width: 100%;
     text-align: center;
   }
+
   ul.social-icons > li {
     margin: 5px;
   }
