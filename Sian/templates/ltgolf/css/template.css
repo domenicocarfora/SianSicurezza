@@ -1,3 +1,111 @@
+/*CSS personalizzati*/
+/*Categorie*/
+.catlogo{
+  max-width: 100%;
+  padding-top: 20px;
+}
+.catname{
+  font-size: 30px;
+  text-align: center;
+}
+.imgcat{
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+/*Carrello*/
+@media only screen and (max-width: 767px) {
+  #itemcarrello {
+    left: 15px!important;
+  }
+}
+
+.imgcarrello{
+  max-width: 45px;
+}
+
+#itemcarrello{
+  width: auto;
+  left: auto;
+  bottom: auto;
+  top: auto;
+  /*width: 300px;*/
+  /*left: -200px;*/
+  /*padding-right: unset!important;*/
+}
+.carrello{
+  padding-top: 8px;
+}
+#aggiungicarrello{
+  width: 200px;
+  height: 30px;
+}
+.contcarrello{
+  position: absolute;
+  right: auto;
+  left: 55px;
+  background: red;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  font-size: 14px;
+  top: 12px;
+  color: white;
+}
+
+/*Immagini gamma*/
+.gammaimg{
+  max-width: 80%;
+  width: 105px!important;
+  padding-right: 140px;
+  height: 50%!important;
+  min-width: 125px!important;
+}
+/*Pulsante invia*/
+#send{
+  margin-top: 40px;
+}
+
+#listcarrello > tr{
+  height: 50px;
+}
+
+/*Pulsante rimuovi*/
+.removebutton{
+  display: inline;
+  max-width: 7%;
+  cursor: pointer;
+}
+.removebuttonfull{
+  display: inline;
+  max-width: 35px;
+  cursor: pointer;
+}
+
+/*Immagini partner*/
+.partnerlogo{
+  max-width: 100px;
+}
+/*.img_partner{*/
+/*  display: flex;*/
+/*}*/
+
+/*Immagini prodotti in categorie*/
+.prodotto_immagine{
+  width: 150px;
+}
+
+/*Immagini dei prodotti in HomePage*/
+.hp_prodotto_immagine{
+  width: 150px;
+}
+.pos-content{
+  /*width: 200px;*/
+}
+
+
+
+/*Base*/
 .form-control {
   display: block;
   height: 34px;
@@ -15,16 +123,7 @@
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.removebutton{
-  max-width: 10%;
-}
-.gammaimg{
-  max-width: 80%;
-  width: 105px!important;
-  padding-right: 140px;
-  height: 50%!important;
-  min-width: 125px!important;
-}
+
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
@@ -811,12 +910,6 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .icon-credit-2:before {
   content: "\e287";
 }
-.partnerlogo{
-  max-width: 100px;
-}
-/*.img_partner{*/
-/*  display: flex;*/
-/*}*/
 
 .icon-expired:before {
   content: "\4b";
@@ -841,18 +934,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
 .sp-megamenu-parent >li.menu-justify {
   position: static;
 }
-.catlogo{
-  max-width: 100%;
-  padding-top: 20px;
-}
-.catname{
-  font-size: 30px;
-  text-align: center;
-}
-.imgcat{
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
+
 .sp-megamenu-parent >li >a,
 .sp-megamenu-parent >li >span {
   display: inline-block;
@@ -1337,20 +1419,6 @@ dl.article-info dd.hits span[class*=" icon-"] {
   padding: 0;
 }
 
-#aggiungicarrello{
-  width: 200px;
-  height: 30px;
-}
-.prodotto_immagine{
-  width: 150px;
-}
-.hp_prodotto_immagine{
-  width: 150px;
-}
-.pos-content{
-  /*width: 200px;*/
-}
-
 .element-image{
   margin-right: 20%!important;
 }
@@ -1359,26 +1427,6 @@ dl.article-info dd.hits span[class*=" icon-"] {
 }
 .active_user >a{
   color: #ffffff;
-}
-#itemcarrello{
-  width: 300px;
-  left: -200px;
-  padding-right: unset!important;
-}
-.carrello{
-  padding-top: 8px;
-}
-.contcarrello{
-  position: absolute;
-  right: auto;
-  left: 55px;
-  background: red;
-  border-radius: 50%;
-  min-width: 20px;
-  height: 20px;
-  font-size: 14px;
-  top: 12px;
-  color: white;
 }
 
 .menu-twist .sp-has-child .sp-dropdown-items {
@@ -1857,10 +1905,6 @@ img {
 }
 #sp-header .logo img {
   max-width: 80%!important;
-}
-
-.imgcarrello{
-  max-width: 45px;
 }
 
 .btn,
