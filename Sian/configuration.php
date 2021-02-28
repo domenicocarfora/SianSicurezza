@@ -16,7 +16,7 @@ class JConfig {
 	public $host = 'mysql';
 	public $user = 'root';
 	public $password = '12345678';
-	public $db = 'topservice';
+	public $db = 'siansicurezza';
 	public $dbprefix = 'joo_';
 	public $live_site = '';
 	public $secret = 'I74mfkPyCMqzaE5i';
