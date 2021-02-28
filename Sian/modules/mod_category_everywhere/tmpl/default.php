@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
         echo "<div class='col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4'>";
         echo "<a href='".JURI::root(). $categoria->path."'>";
         echo "<span>$categoria->name</span>";
-        echo "<img class='catlogo' src='". JURI::root().$parametri['content.image']. "' alt='$categoria->name'>";
+        echo "<img class='catlogo' src='". JURI::root().$parametri['content.image']. "' alt='$categoria->name' title='$categoria->name'>";
         echo "</a>";
         echo "</div>";}
     ?>
