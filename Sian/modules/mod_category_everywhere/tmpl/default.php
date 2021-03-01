@@ -6,9 +6,9 @@ defined('_JEXEC') or die;
     <?php
     foreach ($categorie as $categoria){
         $parametri=json_decode($categoria->params,true);
-        echo "<div class='col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4'>";
+        echo "<div class='col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 imgcat'>";
         echo "<a href='".JURI::root(). $categoria->path."'>";
-        echo "<span>$categoria->name</span>";
+        echo "<span class='catname'><b>$categoria->name</b></span>";
         echo "<img class='catlogo' src='". JURI::root().$parametri['content.image']. "' alt='$categoria->name' title='$categoria->name'>";
         echo "</a>";
         echo "</div>";}
