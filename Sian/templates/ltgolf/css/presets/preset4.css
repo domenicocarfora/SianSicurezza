@@ -25,9 +25,11 @@ ul.social-icons >li a:hover {
 .layout-boxed .body-innerwrapper {
   background: #ffffff;
 }
-.sp-module ul >li >a {
-  color: #000000;
-}
+/*rimosso colore nero per tag di una lista*/
+
+/*.sp-module ul >li >a {*/
+/*  color: #000000;*/
+/*}*/
 .sp-module ul >li >a:hover {
   color: #6e48f8;
 }

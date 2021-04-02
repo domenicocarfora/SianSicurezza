@@ -6,11 +6,12 @@ defined('_JEXEC') or die;
 
             <?php if(count($carrello)>0){
                 echo "<div><table id='listcarrello' style='width: 50%'>
-        <tr style='height: 50px'><td>Nome prodotto</td><td>Quantità</td><td>Opzioni</td></tr>";
+        <tr style='height: 50px;font-size: medium'><td></td><td><b>Nome prodotto</b></td><td><b>Quantità</b></td><td></td></tr>";
                 foreach ($carrello as $item){
                     echo "<tr id='shopitem-".$item->id_prodotto."' style='height: 50px'>
+<td><span><img class='img_carrello' src=".$item->immagine."></span></td>
 <td><span>".$item->name."</span></td>   
-<td><span> <input class='quantity' data-id_prod=".$item->id_prodotto." value=".$item->quantita." type='number' id='quantity' name='quantity'/></span> </td>  
+<td><span> <input class='quantity quantity_full' data-id_prod=".$item->id_prodotto." value=".$item->quantita." type='number' id='quantity' name='quantity'/></span> </td>  
 <td><span><img class='removebuttonfull remove button' src='images/icone/elimina.svg' aria-label=rimuovi data-id='".$item->id_prodotto."'></span></td></tr>";
                 };
                 echo "</div>";

@@ -12,6 +12,13 @@
   padding-top: 30px;
   padding-bottom: 20px;
 }
+/*.sp-module ul >li >a:before {*/
+/*  content: none!important;*/
+/*}*/
+
+#frame > h1:nth-child(2){
+  display: none;
+}
 
 /*Carrello*/
 @media only screen and (max-width: 767px) {
@@ -78,8 +85,16 @@
 }
 .removebuttonfull{
   display: inline;
-  max-width: 35px;
+  max-width: 30px;
   cursor: pointer;
+}
+
+.img_carrello{
+  max-width: 60px;
+}
+
+.quantity_full{
+  width: 70px;
 }
 
 /*Immagini partner*/
@@ -90,18 +105,31 @@
 /*  display: flex;*/
 /*}*/
 
-/*Immagini prodotti in categorie*/
+/*Item_everywhere */
+/*Immagini prodotti default*/
 .prodotto_immagine{
   width: 150px;
+}
+.img_item{
+  /*position: absolute;*/
+  /*left: 10px;*/
+}
+.short_desc{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  max-height: 100px;
+}
+.description{
+  /*position: absolute;*/
+  /*right: 10px;*/
 }
 
 /*Immagini dei prodotti in HomePage*/
 .hp_prodotto_immagine{
   width: 150px;
 }
-.pos-content{
-  /*width: 200px;*/
-}
+
 
 /*Form contattaci*/
 #jform_contact_message{
@@ -2388,11 +2416,16 @@ ul.social-icons >li a {
 .sp-module ul >li >a:hover {
   background: none;
 }
-.sp-module ul >li >a:before {
-  font-family: FontAwesome;
-  content: "\f105";
-  margin-right: 8px;
-}
+
+/*rimosso html before nel tag a di una lista*/
+
+/*.sp-module ul >li >a:before {*/
+/*  font-family: FontAwesome;*/
+/*  content: "\f105";*/
+/*  margin-right: 8px;*/
+/*}*/
+
+
 .sp-module ul >li:last-child {
   border-bottom: none;
 }
