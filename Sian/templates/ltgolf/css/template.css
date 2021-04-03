@@ -1,4 +1,5 @@
 /*CSS personalizzati*/
+
 /*Categorie*/
 .catlogo{
   max-width: 100%;
@@ -32,12 +33,12 @@
 }
 
 #itemcarrello{
-  width: auto;
-  left: auto;
+  /*width: auto;*/
+  /*left: auto;*/
   bottom: auto;
   top: auto;
-  /*width: 300px;*/
-  /*left: -200px;*/
+  width: 300px;
+  left: -200px;
   /*padding-right: unset!important;*/
 }
 .carrello{
@@ -60,6 +61,37 @@
   color: white;
 }
 
+.shopitemimg{
+  display: inline-block;
+}
+
+.modal-open{
+  overflow: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 10040;
+  overflow: hidden;
+  overflow-y: hidden;!important;
+  overflow-x: hidden;!important;
+}
+
+.shopiteminfo{
+  width: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.carrline{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /*Immagini gamma*/
 .gammaimg{
   max-width: 80%;
@@ -80,7 +112,7 @@
 /*Pulsante rimuovi*/
 .removebutton{
   display: inline;
-  max-width: 7%;
+  max-width: 15%;
   cursor: pointer;
 }
 .removebuttonfull{
@@ -91,6 +123,10 @@
 
 .img_carrello{
   max-width: 60px;
+}
+
+.imgcarritem{
+  max-width: 70px;
 }
 
 .quantity_full{
