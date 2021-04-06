@@ -137,19 +137,18 @@
 .partnerlogo{
   max-width: 100px;
 }
-/*.img_partner{*/
-/*  display: flex;*/
-/*}*/
 
 /*Item_everywhere */
 /*Immagini prodotti default*/
 .prodotto_immagine{
   width: 150px;
 }
-.img_item{
-  /*position: absolute;*/
-  /*left: 10px;*/
+
+.items_ls{
+  display: flex;
+  /*justify-content: space-between;*/
 }
+
 .short_desc{
   overflow: hidden;
   text-overflow: ellipsis;
@@ -157,8 +156,28 @@
   max-height: 100px;
 }
 .description{
-  /*position: absolute;*/
-  /*right: 10px;*/
+  margin-left: 50px;
+}
+
+/*numeri pagination item_everywhere */
+.pag_list{
+  display: inline-block!important;
+}
+
+.pag_link{
+  padding: 0px 13px!important;
+}
+
+.pagination{
+  border-radius: .25rem;
+}
+
+/*Immagine loading*/
+#loading{
+  max-width: 80px;
+  margin-inline: auto;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 /*Immagini dei prodotti in HomePage*/
