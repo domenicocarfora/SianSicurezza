@@ -6,17 +6,17 @@ defined('_JEXEC') or die;
 
             <?php if(count($carrello)>0){
                 echo "<div><table id='listcarrello' style='width: 50%'>
-        <tr style='height: 50px;font-size: medium'><td></td><td><b>Nome prodotto</b></td><td><b>Quantità</b></td><td></td></tr>";
+        <tr class='carr_head' style=''><td></td><td><b>Nome prodotto</b></td><td style='margin: 100px'><b>Quantità</b></td><td></td></tr>";
                 foreach ($carrello as $item){
-                    echo "<tr id='shopitem-".$item->id_prodotto."' style='height: 50px'>
+                    echo "<tr class='carr_itm' id='shopitem-".$item->id_prodotto."' style='height: 50px'>
 <td><span><img class='img_carrello' src=".$item->immagine."></span></td>
-<td><span>".$item->name."</span></td>   
+<td><span class='name_carr'>".$item->name."</span></td>   
 <td><span> <input class='quantity quantity_full' data-id_prod=".$item->id_prodotto." value=".$item->quantita." type='number' id='quantity' name='quantity'/></span> </td>  
-<td><span><img class='removebuttonfull remove button' src='images/icone/elimina.svg' aria-label=rimuovi data-id='".$item->id_prodotto."'></span></td></tr>";
+<td><span class='butt_rem_carr'><img class='removebuttonfull remove button' src='images/icone/elimina.svg' aria-label=rimuovi data-id='".$item->id_prodotto."'></span></td></tr>";
                 };
                 echo "</div>";
             }else{
-                echo "<span>Il carrello è vuoto</span>";
+                echo "<span><b>Il tuo carrello è vuoto</b></span>";
             } ?>
     </table>
 </div>

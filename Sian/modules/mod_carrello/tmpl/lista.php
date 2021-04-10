@@ -28,7 +28,7 @@ defined('_JEXEC') or die;
                         <hr class='carrline'>";
                 };
                 echo "</div>";
-                echo "<div><a href='/carrello'> Vai al Carrello</a></div>";
+                echo "<div class='go_carr'><a href='/carrello'><b>Vai al Carrello</b></a></div>";
             }else{
                 echo "<span>Il carrello è vuoto</span>";
             } ?>

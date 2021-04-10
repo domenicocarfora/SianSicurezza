@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 ?>
-<div class="carrello"><p><a class="btn" href="#itemcarrello" role="button" data-toggle="modal">
+<div class="carrello"><p><a class="btn" data-target="#itemcarrello" role="button" data-toggle="modal" data-backdrop="static" data-keyboard="false">
             <?php if(count($carrello)>0){
                 echo "<span class='contcarrello'>".count($carrello)."</span>";
             } ?>
@@ -9,13 +9,13 @@ defined('_JEXEC') or die;
         </a></p>
 </div>
 
-<div id="itemcarrello" class="panel" style="display: none;">
+<div id="itemcarrello" class="modal fade in" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-content">
         <div class="modal-body">
             <?php if(count($carrello)>0){
                 echo "<div><ul>";
                 foreach ($carrello as $item){
-                    echo "<li id='shopitem-".$item->id_prodotto."'><span>".$item->name."</span>   <span>  x".$item->quantita."</span>   <span><button type=button class=remove aria-label=rimuovi data-id='".$item->id_prodotto."'> X </button></span></li>";
+                    echo "<li id='shopitem-".$item->id_prodotto."'><span>".$item->name."</span>   <span>  x".$item->quantita."</span> <span><img class='removebutton button remove' aria-label='rimuovi' src='/images/icone/elimina.svg' data-id='".$item->id_prodotto."'></span></li>";
                 };
                 echo "</ul></div>";
                 echo "<div><a href='/carrello'> Vai al Carrello</a></div>";

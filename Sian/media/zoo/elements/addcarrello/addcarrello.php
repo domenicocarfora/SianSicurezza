@@ -76,8 +76,9 @@ function addcarrello(id_prodotto,quantita){
                 success: function(data) {
                     if (data.success) {
                     alert('Il prodotto è stato aggiunto al carrello')
+                    location.reload();
                     }else{
-                        console.log(data);
+                    alert('Non è stato possibile aggiungere il prodotto al carrello')
                     }
                 },
                 error: function(xhr, textStatus, errorThrown) {

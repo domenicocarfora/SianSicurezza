@@ -32,6 +32,10 @@
   max-width: 45px;
 }
 
+.shopiteminfo_name{
+  font-size: large;
+}
+
 #itemcarrello{
   /*width: auto;*/
   /*left: auto;*/
@@ -92,6 +96,38 @@
   margin-bottom: 10px;
 }
 
+.name_carr{
+  margin: 100px;
+}
+
+.butt_rem_carr{
+  margin: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  .name_carr {
+    margin: auto!important;
+  }
+
+  .butt_rem_carr{
+    margin: auto;
+  }
+}
+
+.carr_head{
+  height: 50px;
+  font-size: large;
+  text-align: center;
+}
+
+.carr_itm{
+  font-size: medium;
+}
+
+.go_carr{
+  text-align: center;
+}
+
 /*Immagini gamma*/
 .gammaimg{
   max-width: 80%;
@@ -149,6 +185,12 @@
   /*justify-content: space-between;*/
 }
 
+@media only screen and (max-width: 576px) {
+  .items_ls{
+    display: block;
+  }
+}
+
 .short_desc{
   overflow: hidden;
   text-overflow: ellipsis;
@@ -162,6 +204,11 @@
 /*numeri pagination item_everywhere */
 .pag_list{
   display: inline-block!important;
+  cursor: pointer;
+}
+
+#no_items{
+  margin-bottom: 30px;
 }
 
 .pag_link{

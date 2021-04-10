@@ -13,7 +13,7 @@ echo "<div><span id='apply_filter' class='btn btn-primary'>Applica filtri</span>
 echo "</br><hr>";
 echo "<div id='container_items'></div>";
 echo "<div id='loading' style='display:block;'><img src=".JUri::base()."images/gifs/wait.gif></div>";
-echo "<div class='pagination' style='display:none;'><a class='pag_list'>Mostra Altro</a></div>";
+echo "<div class='pagination' style='display:none;'><a class='pag_list'><b>Mostra Altro</b></a></div>";
 echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>";
 echo "<script type='application/javascript'>
 
@@ -100,7 +100,7 @@ function moreItems() {
                 contentType: 'application/json',
                 success: function (data) {
                     if (data=='' || !data){
-                        var test='<div id=\"no_items\">Non ci sono nuovi elementi</div>';
+                        var test='<div id=\"no_items\"><b>Nessun nuovo elemento</b></div>';
                         $('.pagination').css('display', 'none');
                     }else{
                         var test='';
