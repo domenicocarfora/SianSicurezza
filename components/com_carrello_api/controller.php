@@ -220,14 +220,14 @@ public function sendcarrello($itemcarrello){
     $user=Factory::getUser();
     $body="L'utente ".$user->name." ha richiesto il preventivo per i seguenti oggetti: <br>";
     foreach ($itemcarrello as $oggetto){
-        $body.=$oggetto->id_prodotto." ".$oggetto->name." X".$oggetto->quantita." <br>";
+        $body.=$oggetto->id_prodotto." ".$oggetto->name." Quantità: ".$oggetto->quantita." <br>";
     }
     $body.="L'id del carrello è:".$oggetto->id_carrello;
     $body.=" <br>L'email dell'utente è: ".$user->email;
     $mail->SMTPAuth = true;
     $mail->isHTML(true);
     $mail->setSender($sender);
-    $to=explode(";", "domenico.carfora@outlook.it");
+    $to=explode(";", "commerciale@siansicurezza.it");
     $mail->addRecipient($to);
     $mail->setBody($body);
     $mail->setSubject("Richiesta preventivo");

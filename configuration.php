@@ -1,9 +1,9 @@
 <?php
 class JConfig {
 	public $offline = '0';
-	public $offline_message = 'Sito fuori servizio per manutenzione.<br /> Riprovare più tardi.';
+	public $offline_message = '<h1 style="color: #6e48f8;">Sito in costruzione<br /> </h1>';
 	public $display_offline_message = '1';
-	public $offline_image = '';
+	public $offline_image = 'images/Work-in-Progress.png';
 	public $sitename = 'Sian Sicurezza';
 	public $editor = 'tinymce';
 	public $captcha = '0';
