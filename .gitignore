@@ -1,0 +1,17 @@
+/cache/
+/administrator/tmp/
+/administrator/cache/
+/administrator/logs/
+/configuration.php
+tmp/
+*.zip
+*.rar
+*.pdf
+*.csv
+*.xls
+*.pgp
+media/
+/administrator/logs
+/images/
+/media/
+uploads
