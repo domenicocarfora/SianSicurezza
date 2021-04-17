@@ -19,9 +19,17 @@ defined('_JEXEC') or die;
                 echo "<span><b>Il tuo carrello è vuoto</b></span>";
             } ?>
     </table>
+</div></div>
+<div class="text_code"><em>Aggiungi un prodotto al carrello tramite il suo codice</em></div>
+<div class="add_item_carr">
+    <input class='prod_name inp_carr' placeholder="Inserisci nome prodotto" type='text' id='prod_name' name='prod_name'/>
+    <input class='prod_quant quantity_full inp_carr' value="1" type='number' id='prod_quant' name='prod_quant'/>
+    <input id="add_prod" class="btn btn-primary inp_carr" type="submit" value="Aggiungi prodotto"/>
 </div>
-<p style="display: flex;"><input id="send" class="btn btn-primary" type="submit" value="Richiesta preventivo"/></p>
-<div class="send"></div>
+
+<div class="text_desc">Richiedi il tuo preventivo e riceverai lo sconto a te riservato.</div>
+    <div class="text_desc_no_marg">Ti risponderemo nel minor tempo possibile.</div>
+<div class="send"><p style="display: flex;"><input id="send" class="btn btn-primary" type="submit" value="Richiesta preventivo"/></p></div>
 
 <script type="text/javascript">
 
@@ -59,9 +67,8 @@ defined('_JEXEC') or die;
                 dataType: 'json',
                 success: function(data) {
                     if (data.success) {
-                        //$('#shopitem-'+id_prodotto).remove();
                     }else{
-                        console.log(data);
+                        alert('Errore nel cambiare la quantità');
                     }
                 },
                 error: function(xhr, textStatus, errorThrown) {
@@ -95,7 +102,28 @@ defined('_JEXEC') or die;
 
         }
 
+        function addItem(name,quantita){
 
+            jQuery.ajax({
+                url: '<?php echo JURI::base() ?>index.php?option=com_carrello_api&task=additem&Itemname='+name+'&quantita='+quantita,
+                type: 'POST',
+                dataType: 'json',
+                success: function(data) {
+                    if (data.success) {
+                        alert('Prodotto aggiunto con successo al carrello');
+                        location.reload();
+                    }else{
+                        alert('Non è stato possibile aggiungere il prodotto al carrello');
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    console.log({
+                        text: errorThrown.message,type:'error'
+                    });
+                }
+            });
+
+        }
 
         jQuery('.remove').click(function() {
                 id_prodotto=($(this).data('id'));
@@ -106,6 +134,14 @@ defined('_JEXEC') or die;
             quantita=this.value;
              id_prodotto=($(this).data('id_prod'));
              updateItem(id_prodotto,quantita);
+        });
+
+        jQuery('#add_prod').click(function() {
+            jQuery('#add_prod').addClass('disabled');
+            quantita=jQuery('#prod_quant').val();
+            name=jQuery('#prod_name').val();
+            addItem(name,quantita);
+            jQuery('#add_prod').removeClass('disabled');
         });
 
         jQuery('#send').click(function() {

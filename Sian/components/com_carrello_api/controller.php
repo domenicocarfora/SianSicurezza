@@ -128,12 +128,17 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
 
 
    public function addItem(){
+       $db = JFactory::getDbo();
 	    $uid=Factory::getUser()->id;
 	    $cid=(int) Factory::getApplication()->input->get('Itemid');
+       $name=Factory::getApplication()->input->get('Itemname');
        $quantita=(int) Factory::getApplication()->input->get('quantita');
+       if ($name!=null || $name!=''){
+           $query = "SELECT id FROM #__zoo_item WHERE name='".$name."' AND state=1;";
+           $cid=$db->setQuery($query)->loadResult();
+       }
         if (!empty($uid) && !empty($cid)) {
             //controllo se l'utente ha già un carrello attivo
-            $db = JFactory::getDbo();
             $querycarrello="SELECT id FROM #__carrello WHERE id_user=".$uid." AND inviato=0;";
             $id_carrello=$db->setQuery($querycarrello)->loadResult();
             //se il carrello non esiste ne creo uno e recupero l'id del nuovo
@@ -142,9 +147,8 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
                 $db->setQuery($querycreatecarrello);
                 $db->execute();
                 $query="SELECT id FROM #__carrello WHERE id_user=".$uid." AND inviato=0;";
-                $id_carrello=$db->loadResult($query);
+                $id_carrello=$db->setQuery($query)->loadResult();
             }
-
             $query = "INSERT INTO #__carrello_prodotto (id_prodotto,id_carrello,quantita) VALUES($cid,$id_carrello,$quantita) ON DUPLICATE KEY UPDATE quantita = quantita + $quantita;";
             $db->setQuery($query);
             $db->execute();

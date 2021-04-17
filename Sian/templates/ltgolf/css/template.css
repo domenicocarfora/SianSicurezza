@@ -1,5 +1,50 @@
 /*CSS personalizzati*/
 
+.add_item_carr{
+  display: flex;
+}
+
+.text_desc{
+  display: flex;
+  margin-top: 50px;
+  font-size: 15pt;
+}
+
+.inp_carr{
+  margin: 20px;
+}
+
+.contatti{
+  margin-top: unset!important;
+  margin-bottom: 50px;
+}
+
+.nostricontatti{
+  display: flex;
+}
+
+.text_code{
+  font-size: 10pt;
+  margin-left: 20px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.text_desc_no_marg{
+  display: flex;
+  font-size: 15pt;
+}
+
+@media only screen and (max-width: 767px) {
+  .nostricontatti{
+    display: block;
+  }
+}
+
+.img_contatti{
+  margin-right: 50px;
+}
+
 /*Categorie*/
 .catlogo{
   max-width: 100%;
@@ -13,9 +58,6 @@
   padding-top: 30px;
   padding-bottom: 20px;
 }
-/*.sp-module ul >li >a:before {*/
-/*  content: none!important;*/
-/*}*/
 
 #frame > h1:nth-child(2){
   display: none;
@@ -37,13 +79,10 @@
 }
 
 #itemcarrello{
-  /*width: auto;*/
-  /*left: auto;*/
   bottom: auto;
   top: auto;
   width: 300px;
   left: -200px;
-  /*padding-right: unset!important;*/
 }
 .carrello{
   padding-top: 8px;
@@ -112,6 +151,10 @@
   .butt_rem_carr{
     margin: auto;
   }
+
+  .add_item_carr{
+    display: block;
+  }
 }
 
 .carr_head{
@@ -136,6 +179,7 @@
   height: 50%!important;
   min-width: 125px!important;
 }
+
 /*Pulsante invia*/
 #send{
   margin-top: 40px;
@@ -182,7 +226,6 @@
 
 .items_ls{
   display: flex;
-  /*justify-content: space-between;*/
 }
 
 @media only screen and (max-width: 576px) {
