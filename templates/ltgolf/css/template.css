@@ -1,5 +1,9 @@
 /*CSS personalizzati*/
 
+#frame > img{
+  max-width: 100%;
+}
+
 .add_item_carr{
   display: flex;
 }
