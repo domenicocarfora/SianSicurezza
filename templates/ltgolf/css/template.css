@@ -1,5 +1,18 @@
 /*CSS personalizzati*/
 
+#jform_terms_terms-lbl > a{
+  position: unset;
+  display: block;
+}
+
+#jform_com_fields_tipo_di_utente0 #jform_com_fields_tipo_di_utente1 #jform_com_fields_tipo_di_utente2{
+  display: none;
+}
+
+#jform_terms_terms > label:nth-child(2){
+  margin-right: 20%;
+}
+
 #frame > img{
   max-width: 100%;
 }
