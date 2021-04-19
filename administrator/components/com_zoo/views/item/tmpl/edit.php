@@ -74,13 +74,13 @@
 					<?php echo $this->lists['select_frontpage']; ?>
 				</div>
 				<?php endif; ?>
+                <div class="element element-primary-category">
+                    <strong><?php echo JText::_('Primary Category'); ?></strong>
+                    <?php echo $this->lists['select_primary_category']; ?>
+                </div>
 				<div class="element element-categories">
 					<strong><?php echo JText::_('Categories'); ?></strong>
 					<?php echo $this->lists['select_categories']; ?>
-				</div>
-				<div class="element element-primary-category">
-					<strong><?php echo JText::_('Primary Category'); ?></strong>
-					<?php echo $this->lists['select_primary_category']; ?>
 				</div>
 				<?php
 				foreach ($this->item->getElements() as $element) {
