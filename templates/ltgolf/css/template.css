@@ -5,7 +5,7 @@
   display: block;
 }
 
-#jform_com_fields_tipo_di_utente0 #jform_com_fields_tipo_di_utente1 #jform_com_fields_tipo_di_utente2{
+#jform_com_fields_tipo_di_utente0, #jform_com_fields_tipo_di_utente1, #jform_com_fields_tipo_di_utente2{
   display: none;
 }
 
