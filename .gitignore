@@ -9,7 +9,5 @@ tmp/
 *.csv
 *.xls
 *.pgp
-media/
 images/
-media/
 uploads/
