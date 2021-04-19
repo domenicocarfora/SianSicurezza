@@ -55,7 +55,7 @@ function getitems() {
                 method: 'POST',
                 contentType: 'application/json',
                 success: function (data) {
-                    if (data=='' || !data){
+                    if (data=='' || !data || data.msg=='no items'){
                         var test='<div id=\"no_items\">Nessun elemento trovato</div>';
                     }else{
                         var test= '<div class=\"items_list\">';
@@ -69,9 +69,9 @@ function getitems() {
                       item['sottotitolo'] + '</h3></div></a><div class=\"short_desc\">'+ item['short_desc'] +'</div></div></div><hr>';
                     })
                     test+='</div>';
+                    jQuery('.pagination').css('display', 'block');
                     }
                     jQuery('#container_items').append(test);
-                    jQuery('.pagination').css('display', 'block');
                 },
         complete: function() {
             $('#loading').css('display', 'none');
@@ -99,7 +99,7 @@ function moreItems() {
                 method: 'POST',
                 contentType: 'application/json',
                 success: function (data) {
-                    if (data=='' || !data){
+                    if (data=='' || !data || data.msg=='no items'){
                         var test='<div id=\"no_items\"><b>Nessun nuovo elemento</b></div>';
                         $('.pagination').css('display', 'none');
                     }else{
