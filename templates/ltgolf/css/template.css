@@ -28,6 +28,10 @@
   text-align: left;
 }
 
+#yoo-zoo > div.item > div.floatbox > div.pos-content > div.element.element-download.last{
+  text-align: right;
+}
+
 #jform_terms_terms-lbl > a{
   position: unset;
   display: block;
@@ -36,7 +40,6 @@
 #jform_com_fields_tipo_di_utente0, #jform_com_fields_tipo_di_utente1, #jform_com_fields_tipo_di_utente2{
   display: none;
 }
-
 
 #jform_terms_terms > label:nth-child(2){
   margin-right: 20%;
@@ -283,7 +286,7 @@
 .short_desc{
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 100%;
   max-height: 100px;
 }
 .description{
