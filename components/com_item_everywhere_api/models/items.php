@@ -56,7 +56,7 @@ class Item_everywhere_apiModelItems extends JModelList
     static function getItemsByCategoryQuery($categories = array()){
         $query="select item_id, CONCAT(',',GROUP_CONCAT(category_id),',') cats from joo_zoo_category_item group by item_id having";
         foreach ($categories as $cat){
-            $query.=" cats like '%".$cat."%' and";
+            $query.=" cats like '%,".$cat.",%' and";
         }
         $query=substr($query,0,-4);
         return $query;
