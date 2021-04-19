@@ -9,13 +9,6 @@
   display: none;
 }
 
-#adminForm > div.box-bottom > div.col.col-left.width-60 > fieldset > div.element.element-comments{
-  display: none;
-}
-
-#adminForm > div.box-bottom > div.col.col-left.width-60 > fieldset > div.element.element-frontpage{
-  display: none;
-}
 
 #jform_terms_terms > label:nth-child(2){
   margin-right: 20%;
