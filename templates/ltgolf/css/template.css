@@ -1,5 +1,33 @@
 /*CSS personalizzati*/
 
+#yoo-zoo > div.item > div.floatbox > div.pos-media.media-left > div > img{
+  max-width: 50%;
+}
+
+#yoo-zoo > div.item > div.floatbox > div.pos-content > div.element.element-textarea.first{
+  display: inline-block;
+}
+
+#yoo-zoo > div.item > div.floatbox > div.pos-content > div.element.element-download.last > a{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.prize{
+  font-size: xxx-large;
+  font-weight: bold;
+}
+
+.adviseprize{
+  font-size: medium;
+  color: red;
+  font-weight: 700;
+}
+
+#yoo-zoo > div.item > ul > li{
+  text-align: left;
+}
+
 #jform_terms_terms-lbl > a{
   position: unset;
   display: block;

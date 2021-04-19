@@ -61,7 +61,7 @@ class ElementPrize extends Element {
     */
 	public function render($params = array()) {
         if (!empty($this->_item)) {
-            return "<span class='prize'> ".$this->get('prezzo')." €</span><br>
+            return "<span class='prize'>€ ".$this->get('prezzo')."</span><br>
             <span class='adviseprize'>* Prezzo di listino da scontare</span>";
         }
 	}
