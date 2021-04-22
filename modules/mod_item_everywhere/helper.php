@@ -8,24 +8,10 @@ class modItemEverywhereHelper{
                 REPLACE(JSON_EXTRACT(JSON_EXTRACT(JSON_EXTRACT(elements,'$.\"08795744-c2dc-4a68-8252-4e21c4c4c774\"'),'$.\"0\"'),'$.\"value\"'),'\"','') as sottotitolo,
                 REPLACE(JSON_EXTRACT(JSON_EXTRACT(JSON_EXTRACT(elements,'$.\"e59e537d-79f3-46d6-8c98-1ef606d98eba\"'),'$.\"0\"'),'$.\"value\"'),'\"','') as short_desc
                 FROM #__zoo_item jzi
-                WHERE jzi.application_id=1 AND (publish_down IS NULL OR publish_down>sysdate()) ORDER BY publish_up DESC LIMIT ".(int)$params->get('limit');
+                WHERE jzi.application_id=1 AND (publish_down IS NULL OR publish_down>sysdate()) AND REPLACE(JSON_EXTRACT(params,'$.\"config.primary_category\"'),'\"','') NOT IN (6,11,12,17,18,21,25,146) ORDER BY publish_up DESC LIMIT ".(int)$params->get('limit');
         $db->setQuery($query);
         $obj = $db->loadObjectList();
-        $items=array();
-        foreach ($obj as $item){
-            $categoryitem=self::getCategoryItem($item->id);
-            $item->categories=$categoryitem;
-            $items[]=$item;
-        }
-    return $items;
-    }
-
-    static function getCategoryItem($item){
-        $db = JFactory::getDBO();
-        $querycategory="SELECT id,name,alias FROM #__zoo_category_item JOIN #__zoo_category ON category_id=id WHERE item_id=".$item;
-        $db->setQuery($querycategory);
-        $category = $db->loadObjectList();
-        return $category;
+    return $obj;
     }
 
     static function getFilter($params){
