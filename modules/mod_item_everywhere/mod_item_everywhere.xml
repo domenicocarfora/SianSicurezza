@@ -45,6 +45,15 @@
 						size="5"
 						label="Filtri Abilitati"/>
 				<field
+						name="produttori"
+						type="sql"
+						query="SELECT id,name FROM #__zoo_category WHERE application_id=1 AND published=1 AND parent = 27;"
+						key_field="id"
+						value_field="name"
+						default="0"
+						multiple="true"
+						label="Produttori Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
+				<field
 						name="homepage"
 						type="radio"
 						default="1"

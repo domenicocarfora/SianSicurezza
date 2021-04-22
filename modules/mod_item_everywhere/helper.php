@@ -37,10 +37,27 @@ class modItemEverywhereHelper{
             $db->setQuery($querycategoryfather);
             $categoryfather=$db->loadObject();
             $filtro=$categoryfather;
+            $produttori= $params->get('produttori');
+            if ($filtro->id == '27'){
+                //se filtro è produttori e non sono stati specificati produttori specifici li mostro tutti
+                if ($produttori == '' || $produttori == null){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObjectList();
+                    $filtro->soon=$categorysoon;
+                }else{
+                foreach ($produttori as $produttore){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$produttore;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObject();
+                    $filtro->soon[]=$categorysoon;
+                }}
+            }else{
             $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
             $db->setQuery($querycategorysoon);
             $categorysoon=$db->loadObjectList();
             $filtro->soon=$categorysoon;
+            }
             $filtriabilitati[] = $filtro;
         }
         return $filtriabilitati;
