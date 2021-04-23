@@ -4,6 +4,10 @@
   max-width: 50%;
 }
 
+#sp-position4 > div > div.sp-module.contatti > div > div > div > div.img_contatti > p > img {
+  max-width: 100%;
+}
+
 #yoo-zoo > div.item > div.floatbox > div.pos-content > div.element.element-textarea.first{
   display: inline-block;
 }
