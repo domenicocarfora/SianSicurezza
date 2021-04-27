@@ -24,6 +24,10 @@ class modItemEverywhereHelper{
             $categoryfather=$db->loadObject();
             $filtro=$categoryfather;
             $produttori= $params->get('produttori');
+            $ottica= $params->get('ottica');
+            $risoluzione= $params->get('risoluzione');
+            $codec= $params->get('codec');
+            $poe= $params->get('poe');
             if ($filtro->id == '27'){
                 //se filtro è produttori e non sono stati specificati produttori specifici li mostro tutti
                 if ($produttori == '' || $produttori == null){
@@ -38,7 +42,63 @@ class modItemEverywhereHelper{
                     $categorysoon=$db->loadObject();
                     $filtro->soon[]=$categorysoon;
                 }}
-            }else{
+            }elseif ($filtro->id == '37'){
+                //se filtro è ottica/zoom e non sono stati specificati produttori specifici li mostro tutti
+                if ($ottica == '' || $ottica == null){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObjectList();
+                    $filtro->soon=$categorysoon;
+                }else{
+                    foreach ($ottica as $ott){
+                        $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$ott;
+                        $db->setQuery($querycategorysoon);
+                        $categorysoon=$db->loadObject();
+                        $filtro->soon[]=$categorysoon;
+                    }
+            }} elseif ($filtro->id == '58'){
+                //se filtro è Risoluzione e non sono stati specificati produttori specifici li mostro tutti
+                if ($risoluzione == '' || $risoluzione == null){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObjectList();
+                    $filtro->soon=$categorysoon;
+                }else{
+                    foreach ($risoluzione as $ris){
+                        $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$ris;
+                        $db->setQuery($querycategorysoon);
+                        $categorysoon=$db->loadObject();
+                        $filtro->soon[]=$categorysoon;
+                    }
+                }} elseif ($filtro->id == '102'){
+                //se filtro è codec e non sono stati specificati produttori specifici li mostro tutti
+                if ($codec == '' || $codec == null){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObjectList();
+                    $filtro->soon=$categorysoon;
+                }else{
+                    foreach ($codec as $cod){
+                        $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$cod;
+                        $db->setQuery($querycategorysoon);
+                        $categorysoon=$db->loadObject();
+                        $filtro->soon[]=$categorysoon;
+                    }
+                }}elseif ($filtro->id == '158'){
+                //se filtro è POE e non sono stati specificati produttori specifici li mostro tutti
+                if ($poe == '' || $poe == null){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObjectList();
+                    $filtro->soon=$categorysoon;
+                }else{
+                    foreach ($poe as $p){
+                        $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$p;
+                        $db->setQuery($querycategorysoon);
+                        $categorysoon=$db->loadObject();
+                        $filtro->soon[]=$categorysoon;
+                    }
+                }} else{
             $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
             $db->setQuery($querycategorysoon);
             $categorysoon=$db->loadObjectList();

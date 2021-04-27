@@ -54,6 +54,42 @@
 						multiple="true"
 						label="Produttori Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
 				<field
+						name="ottica"
+						type="sql"
+						query="SELECT id,name FROM #__zoo_category WHERE application_id=1 AND published=1 AND parent = 35;"
+						key_field="id"
+						value_field="name"
+						default="0"
+						multiple="true"
+						label="Ottica/zoom Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
+				<field
+						name="risoluzione"
+						type="sql"
+						query="SELECT id,name FROM #__zoo_category WHERE application_id=1 AND published=1 AND parent = 58;"
+						key_field="id"
+						value_field="name"
+						default="0"
+						multiple="true"
+						label="Risoluzione Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
+				<field
+						name="codec"
+						type="sql"
+						query="SELECT id,name FROM #__zoo_category WHERE application_id=1 AND published=1 AND parent = 102;"
+						key_field="id"
+						value_field="name"
+						default="0"
+						multiple="true"
+						label="Codec Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
+				<field
+						name="poe"
+						type="sql"
+						query="SELECT id,name FROM #__zoo_category WHERE application_id=1 AND published=1 AND parent = 158;"
+						key_field="id"
+						value_field="name"
+						default="0"
+						multiple="true"
+						label="POE Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
+				<field
 						name="homepage"
 						type="radio"
 						default="1"
