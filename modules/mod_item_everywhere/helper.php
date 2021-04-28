@@ -28,6 +28,7 @@ class modItemEverywhereHelper{
             $risoluzione= $params->get('risoluzione');
             $codec= $params->get('codec');
             $poe= $params->get('poe');
+            $series= $params->get('serie');
             if ($filtro->id == '27'){
                 //se filtro è produttori e non sono stati specificati produttori specifici li mostro tutti
                 if ($produttori == '' || $produttori == null){
@@ -94,6 +95,20 @@ class modItemEverywhereHelper{
                 }else{
                     foreach ($poe as $p){
                         $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$p;
+                        $db->setQuery($querycategorysoon);
+                        $categorysoon=$db->loadObject();
+                        $filtro->soon[]=$categorysoon;
+                    }
+                }}elseif ($filtro->id == '64'){
+                //se filtro è Serie e non sono stati specificati produttori specifici li mostro tutti
+                if ($series == '' || $series == null){
+                    $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
+                    $db->setQuery($querycategorysoon);
+                    $categorysoon=$db->loadObjectList();
+                    $filtro->soon=$categorysoon;
+                }else{
+                    foreach ($series as $serie){
+                        $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE id=".(int)$serie;
                         $db->setQuery($querycategorysoon);
                         $categorysoon=$db->loadObject();
                         $filtro->soon[]=$categorysoon;

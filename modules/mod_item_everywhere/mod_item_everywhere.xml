@@ -90,6 +90,15 @@
 						multiple="true"
 						label="POE Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
 				<field
+						name="serie"
+						type="sql"
+						query="SELECT id,name FROM #__zoo_category WHERE application_id=1 AND published=1 AND parent = 64;"
+						key_field="id"
+						value_field="name"
+						default="0"
+						multiple="true"
+						label="Serie Abilitati (lasciare vuoto se li vuoi mostrare tutti)"/>
+				<field
 						name="homepage"
 						type="radio"
 						default="1"
