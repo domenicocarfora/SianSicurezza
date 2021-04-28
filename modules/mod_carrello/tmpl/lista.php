@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
                 echo "</div>";
                 echo "<div class='go_carr'><a href='/carrello'><b>Vai al Carrello</b></a></div>";
             }else{
-                echo "<span>Il carrello è vuoto</span>";
+                echo "<span class='void_msg'><b>Il carrello è vuoto</b></span>";
             } ?>
         </div>
     </div>

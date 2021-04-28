@@ -4,6 +4,10 @@
   max-width: 50%;
 }
 
+.void_msg{
+  text-align: center;
+}
+
 #sp-position4 > div > div.sp-module.contatti > div > div > div > div.img_contatti > p > img {
   max-width: 100%;
 }
