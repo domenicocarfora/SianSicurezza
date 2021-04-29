@@ -40,7 +40,7 @@ class Item_everywhere_apiModelItems extends JModelList
                 REPLACE(JSON_EXTRACT(JSON_EXTRACT(JSON_EXTRACT(elements,'$.\"08795744-c2dc-4a68-8252-4e21c4c4c774\"'),'$.\"0\"'),'$.\"value\"'),'\"','') as sottotitolo,
                 REPLACE(JSON_EXTRACT(JSON_EXTRACT(JSON_EXTRACT(elements,'$.\"e59e537d-79f3-46d6-8c98-1ef606d98eba\"'),'$.\"0\"'),'$.\"value\"'),'\"','') as short_desc
                 FROM #__zoo_item jzi
-                WHERE jzi.application_id=1 AND (publish_down IS NULL OR publish_down>sysdate()) AND jzi.id in (".implode(',', $ids).") ORDER BY jzi.id LIMIT ".$last.",10;";
+                WHERE jzi.application_id=1 AND state=1 AND (publish_down IS NULL OR publish_down>sysdate()) AND jzi.id in (".implode(',', $ids).") ORDER BY jzi.id LIMIT ".$last.",10;";
 
         $db->setQuery($query);
         $items = $db->loadObjectList();
