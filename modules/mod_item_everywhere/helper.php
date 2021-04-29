@@ -43,7 +43,7 @@ class modItemEverywhereHelper{
                     $categorysoon=$db->loadObject();
                     $filtro->soon[]=$categorysoon;
                 }}
-            }elseif ($filtro->id == '37'){
+            }elseif ($filtro->id == '35'){
                 //se filtro è ottica/zoom e non sono stati specificati produttori specifici li mostro tutti
                 if ($ottica == '' || $ottica == null){
                     $querycategorysoon="SELECT id,name FROM #__zoo_category WHERE parent=".(int)$filtro->id;
