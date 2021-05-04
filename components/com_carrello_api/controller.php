@@ -223,10 +223,18 @@ public function sendcarrello($itemcarrello,$id_carrello){
     );
     $user=Factory::getUser();
     $body="L'utente ".$user->name." ha richiesto il preventivo per i seguenti oggetti: <br>";
-
-    $file = fopen($id_carrello.'.csv', 'w');
-    fputcsv($file, $itemcarrello);
-    fclose($file);
+    $pathfile= JURI::base()."tmp/".$id_carrello.".csv";
+    $fp = fopen($pathfile, 'w');
+    $firstRow=true;
+    foreach ($itemcarrello as $result){
+        if($firstRow){
+            $header = array_keys($result);
+            fputcsv($fp, $header);
+            $firstRow=false;
+        }
+        fputcsv($fp, $result);
+    }
+    fclose($fp);
     foreach ($itemcarrello as $oggetto){
         $body.=$oggetto->id_prodotto." ".$oggetto->name." Quantità: ".$oggetto->quantita." <br>";
     }
@@ -236,7 +244,7 @@ public function sendcarrello($itemcarrello,$id_carrello){
     $mail->isHTML(true);
     $mail->setSender($sender);
     $to=explode(";", "commerciale@siansicurezza.it");
-    $mail->addAttachment($file,$oggetto->id_carrello.".csv");
+    $mail->addAttachment($pathfile);
     $mail->addRecipient($to);
     $mail->setBody($body);
     $mail->setSubject("Richiesta preventivo");
