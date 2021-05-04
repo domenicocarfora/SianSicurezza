@@ -93,19 +93,23 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
         $id_carrello=$db->setQuery($querycarrello)->loadResult();
         if (!empty($uid) && !empty($id_carrello)) {
 
-            $queryitemcarrello="SELECT zi.name,cp.quantita,cp.id_prodotto,cp.id_carrello FROM #__zoo_item zi
+            $queryitemcarrello="SELECT zi.name,cp.quantita,cp.id_prodotto FROM #__zoo_item zi
                 JOIN #__carrello_prodotto cp ON zi.id=cp.id_prodotto
                 JOIN #__carrello c ON cp.id_carrello=c.id 
                 WHERE cp.quantita<>0 and c.id=$id_carrello AND c.id_user=".$uid;
 
             $db->setQuery($queryitemcarrello);
-            $itemcarrello = $db->loadObjectList();
-
-            $this->sendcarrello($itemcarrello);
+            $itemcarrello = $db->loadAssocList();
+            if ($this->sendcarrello($itemcarrello,$id_carrello)){
 
             $query = "UPDATE #__carrello SET inviato=1, data_invio='".date('Y-m-d')."' WHERE id=$id_carrello;";
-            $db->setQuery($query);
-            //$db->execute();
+            $db->setQuery($query);}else {
+                echo json_encode(array(
+                    "success" => false,
+                    "error" => "Errore nell'invio dell'email"
+                ));
+            }
+            $db->execute();
             if ($db->getErrorNum()) {
                 echo json_encode(array(
                     "success" => false,
@@ -210,7 +214,7 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
     }
 
 
-public function sendcarrello($itemcarrello){
+public function sendcarrello($itemcarrello,$id_carrello){
     $config = JFactory::getConfig();
     $mail = JFactory::getMailer();
     $sender = array(
@@ -219,24 +223,30 @@ public function sendcarrello($itemcarrello){
     );
     $user=Factory::getUser();
     $body="L'utente ".$user->name." ha richiesto il preventivo per i seguenti oggetti: <br>";
+
+    $file = fopen($id_carrello.'.csv', 'w');
+    fputcsv($file, $itemcarrello);
+    fclose($file);
     foreach ($itemcarrello as $oggetto){
         $body.=$oggetto->id_prodotto." ".$oggetto->name." Quantità: ".$oggetto->quantita." <br>";
     }
-    $body.="L'id del carrello è:".$oggetto->id_carrello;
+    $body.="L'id del carrello è:".$id_carrello;
     $body.=" <br>L'email dell'utente è: ".$user->email;
     $mail->SMTPAuth = false;
     $mail->isHTML(true);
     $mail->setSender($sender);
     $to=explode(";", "commerciale@siansicurezza.it");
+    $mail->addAttachment($file,$oggetto->id_carrello.".csv");
     $mail->addRecipient($to);
     $mail->setBody($body);
     $mail->setSubject("Richiesta preventivo");
     try {
         $x=$mail->Send();
-        var_dump($x);exit();
-    } catch (Exception $e) {
+        } catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
+        return false;
     }
+    return true;
 }
 
 }
