@@ -4,12 +4,16 @@
   max-width: 50%;
 }
 
+body.modal-open {
+  padding-right: 0! important;
+}
+
 .void_msg{
   text-align: center;
 }
 
 .img_col_brand{
-  height: 200px;
+  height: 100px;
 }
 
 #sp-position4 > div > div.sp-module.contatti > div > div > div > div.img_contatti > p > img {
