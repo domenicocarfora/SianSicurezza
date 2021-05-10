@@ -1,6 +1,7 @@
 /*CSS personalizzati*/
 
 #yoo-zoo > div.item > div.floatbox > div.pos-media.media-left > div > img{
+  width: 1000px;
   max-width: 50%;
 }
 
@@ -146,8 +147,8 @@ body.modal-open {
 #itemcarrello{
   bottom: auto;
   top: auto;
-  width: 300px;
-  left: -200px;
+  width: 350px;
+  left: -250px;
 }
 .carrello{
   padding-top: 8px;

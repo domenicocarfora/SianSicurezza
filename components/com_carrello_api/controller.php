@@ -223,7 +223,7 @@ public function sendcarrello($itemcarrello,$id_carrello){
     );
     $user=Factory::getUser();
     $body="L'utente ".$user->name." ha richiesto il preventivo per i seguenti oggetti: <br>";
-    $pathfile= JURI::base()."tmp/".$id_carrello.".csv";
+    $pathfile= JPath::base()."ordini_csv/".$id_carrello.".csv";
     $fp = fopen($pathfile, 'w');
     $firstRow=true;
     foreach ($itemcarrello as $result){
