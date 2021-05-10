@@ -89,8 +89,9 @@ defined('_JEXEC') or die;
                 success: function(data) {
                     if (data.success) {
                         alert("Richiesta di preventivo correttamente inviato");
+                        location.reload();
                     }else{
-                        console.log(data);
+                        alert(data.message);
                     }
                 },
                 error: function(xhr, textStatus, errorThrown) {

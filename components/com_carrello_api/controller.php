@@ -93,7 +93,7 @@ class Carrello_apiController extends \Joomla\CMS\MVC\Controller\BaseController
         $id_carrello=$db->setQuery($querycarrello)->loadResult();
         if (!empty($uid) && !empty($id_carrello)) {
 
-            $queryitemcarrello="SELECT zi.name,cp.quantita,cp.id_prodotto FROM #__zoo_item zi
+            $queryitemcarrello="SELECT zi.name,cp.quantita FROM #__zoo_item zi
                 JOIN #__carrello_prodotto cp ON zi.id=cp.id_prodotto
                 JOIN #__carrello c ON cp.id_carrello=c.id 
                 WHERE cp.quantita<>0 and c.id=$id_carrello AND c.id_user=".$uid;
@@ -222,13 +222,13 @@ public function sendcarrello($itemcarrello,$id_carrello){
         $config->get('fromname')
     );
     $user=Factory::getUser();
-    $body="L'utente ".$user->name." ha richiesto il preventivo per i seguenti oggetti: <br>";
-    $pathfile= JPath::base()."ordini_csv/".$id_carrello.".csv";
+    $body="L'utente ".$user->name." ha richiesto un preventivo per i seguenti prodotti: <br>";
+    $pathfile= JPATH_BASE."/ordini_csv/".$id_carrello.".csv";
     $fp = fopen($pathfile, 'w');
     $firstRow=true;
     foreach ($itemcarrello as $result){
         if($firstRow){
-            $header = array_keys($result);
+            $header[0]="Cod.";$header[1]="Q.tà";
             fputcsv($fp, $header);
             $firstRow=false;
         }
@@ -236,9 +236,9 @@ public function sendcarrello($itemcarrello,$id_carrello){
     }
     fclose($fp);
     foreach ($itemcarrello as $oggetto){
-        $body.=$oggetto->id_prodotto." ".$oggetto->name." Quantità: ".$oggetto->quantita." <br>";
+        $body.=$oggetto['name']." Quantità: ".$oggetto['quantita']." <br>";
     }
-    $body.="L'id del carrello è:".$id_carrello;
+    $body.="L'id del carrello è: ".$id_carrello;
     $body.=" <br>L'email dell'utente è: ".$user->email;
     $mail->SMTPAuth = false;
     $mail->isHTML(true);
