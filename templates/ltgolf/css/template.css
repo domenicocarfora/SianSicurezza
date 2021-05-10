@@ -1,8 +1,95 @@
 /*CSS personalizzati*/
 
+@media (min-width: 1024px){
+  #searchForm {
+    float: left;
+    width: calc(25% - 3rem);
+    margin: 1rem 3rem 1rem 3rem;
+  }
+
+  .result-article{
+    width: calc(50% - 3rem);
+    margin-right: 8.33%;
+  }
+}
+
+.result-article{
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background: #f0f0f0;
+}
+
+.result-created {
+  display: none;
+}
+
+#searchForm > fieldset.phrases > legend{
+  display: none;
+}
+
+#searchForm #search-searchword {
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.6rem;
+  border: 0;
+  padding: 0 .5rem;
+  border-bottom: 1px solid #337ab7;
+  border-radius: 0;
+  line-height: 3.6rem;
+  background: transparent;
+  box-shadow: none;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+#searchForm select {
+  display: inline-block;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  padding: 0 3.2rem 0 .5rem;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #337ab7;
+  box-shadow: none;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat, repeat;
+  background-position: right .5rem center;
+  background-size: 2rem;
+}
+
+#searchForm select:hover {
+  border-bottom: 1px solid #337ab7;
+  box-shadow: 0 -2px 0 0 #337ab7 inset;
+}
+#searchForm select:focus {
+  background-color: rgba(0,0,0,.05);
+  border-bottom: 1px solid #337ab7;
+  box-shadow: 0 -2px 0 0 #337ab7 inset;
+  /*box-shadow: 0 0 0 3px -moz-mac-focusring;*/
+  color: #222;
+  outline: none;
+}
+
+#searchForm > div.btn-toolbar > div:nth-child(1) > label{
+  display: none;
+}
+
+#searchForm > div.btn-toolbar{
+  display: flex;
+}
+
 #yoo-zoo > div.item > div.floatbox > div.pos-media.media-left > div > img{
   width: 1000px;
   max-width: 50%;
+}
+
+#searchForm > fieldset.only{
+  display: none;
 }
 
 body.modal-open {
@@ -2704,9 +2791,10 @@ ul.social-icons >li a {
 }
 .search .phrases .phrases-box .controls label {
   display: inline-block;
-  margin: 0 20px 20px;
+  margin: 0 20px 5px;
 }
 .search .phrases .ordering-box {
+  margin-top: 20px;
   margin-bottom: 15px;
 }
 .search .only label {
@@ -2714,7 +2802,7 @@ ul.social-icons >li a {
   margin: 0 20px 20px;
 }
 .search .search-results dt.result-title {
-  margin-top: 40px;
+  /*margin-top: 40px;*/
 }
 .search .search-results dt,
 .search .search-results dd {

@@ -32,13 +32,6 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 		<input type="hidden" name="task" value="search" />
 		<div class="clearfix"></div>
 	</div>
-	<div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
-		<?php if (!empty($this->searchword)) : ?>
-			<p>
-				<?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<span class="badge badge-info">' . $this->total . '</span>'); ?>
-			</p>
-		<?php endif; ?>
-	</div>
 	<?php if ($this->params->get('search_phrases', 1)) : ?>
 		<fieldset class="phrases">
 			<legend>
@@ -80,4 +73,11 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 			<?php echo $this->pagination->getPagesCounter(); ?>
 		</p>
 	<?php endif; ?>
+    <div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
+        <?php if (!empty($this->searchword)) : ?>
+            <p>
+                <?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<span class="badge badge-info">' . $this->total . '</span>'); ?>
+            </p>
+        <?php endif; ?>
+    </div>
 </form>

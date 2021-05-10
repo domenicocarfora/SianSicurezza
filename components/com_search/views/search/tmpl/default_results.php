@@ -12,8 +12,9 @@ defined('_JEXEC') or die;
 ?>
 <dl class="search-results<?php echo $this->pageclass_sfx; ?>">
 <?php foreach ($this->results as $result) : ?>
+<div class="result-article">
 	<dt class="result-title">
-		<?php echo $this->pagination->limitstart + $result->count . '. '; ?>
+<!--		--><?php //echo $this->pagination->limitstart + $result->count . '. '; ?>
 		<?php if ($result->href) : ?>
 			<a href="<?php echo JRoute::_($result->href); ?>"<?php if ($result->browsernav == 1) : ?> target="_blank"<?php endif; ?>>
 				<?php // $result->title should not be escaped in this case, as it may ?>
@@ -41,6 +42,7 @@ defined('_JEXEC') or die;
 			<?php echo JText::sprintf('JGLOBAL_CREATED_DATE_ON', $result->created); ?>
 		</dd>
 	<?php endif; ?>
+    </div>
 <?php endforeach; ?>
 </dl>
 <div class="pagination">
