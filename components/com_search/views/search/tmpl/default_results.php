@@ -44,7 +44,8 @@ defined('_JEXEC') or die;
 	<?php endif; ?>
     </div>
 <?php endforeach; ?>
+    <div class="pagination">
+        <?php echo $this->pagination->getPagesLinks(); ?>
+    </div>
 </dl>
-<div class="pagination">
-	<?php echo $this->pagination->getPagesLinks(); ?>
-</div>
+

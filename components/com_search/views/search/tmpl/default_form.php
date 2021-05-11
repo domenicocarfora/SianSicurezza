@@ -69,9 +69,9 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 			</label>
 			<?php echo $this->pagination->getLimitBox(); ?>
 		</div>
-		<p class="counter">
-			<?php echo $this->pagination->getPagesCounter(); ?>
-		</p>
+<!--		<p class="counter">-->
+<!--			--><?php //echo $this->pagination->getPagesCounter(); ?>
+<!--		</p>-->
 	<?php endif; ?>
     <div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
         <?php if (!empty($this->searchword)) : ?>
