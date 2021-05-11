@@ -84,9 +84,18 @@
   -webkit-appearance: none;
   appearance: none;
   background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M15 8.2l-5 5-5-5' stroke='%23555' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat, repeat;
   background-position: right .5rem center;
   background-size: 2rem;
+}
+
+#searchForm > div.searchintro > p > strong > span{
+  background-color: #6e48f8;
+}
+
+#searchForm > div.searchintro{
+  margin-top: 15px;
 }
 
 #searchForm select:hover {
