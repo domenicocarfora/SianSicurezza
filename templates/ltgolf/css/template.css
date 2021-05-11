@@ -15,6 +15,12 @@
     margin: 1rem 3rem 1rem 3rem;
   }
 
+  .pagination_result{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
   .result-article{
     margin: 3rem 35rem!important;
     width: calc(70% - 3rem);
