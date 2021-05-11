@@ -1,5 +1,13 @@
 /*CSS personalizzati*/
 
+@media (min-width: 1024px) and (min-height: 654px) {
+  #searchForm {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+  }
+}
+
 @media (min-width: 1024px){
   #searchForm {
     float: left;
@@ -8,7 +16,8 @@
   }
 
   .result-article{
-    width: calc(50% - 3rem);
+    margin: 3rem 35rem!important;
+    width: calc(70% - 3rem);
     margin-right: 8.33%;
   }
 }
@@ -27,6 +36,17 @@
   display: none;
 }
 
+#searchForm #search-searchword:hover {
+  border-bottom: 1px solid #337ab7;
+  box-shadow: 0 -2px 0 0 #337ab7 inset;
+}
+
+#searchForm #search-searchword:focus {
+  background-color: rgba(0,0,0,.05);
+  border-bottom: 1px solid #337ab7;
+  box-shadow: 0 -2px 0 0 #337ab7 inset;
+}
+
 #searchForm #search-searchword {
   width: 100%;
   box-sizing: border-box;
@@ -40,6 +60,7 @@
   box-shadow: none;
   flex-shrink: 1;
   flex-grow: 1;
+  font-size: 18px;
 }
 
 #searchForm select {
