@@ -62,7 +62,7 @@ class ElementAddcarrello extends Element {
 	public function render($params = array()) {
         if (!empty($this->_item)) {
             if ($this->get('value')=='1'){
-            return " <div><input type='number' id='quantitymodal' name='quantity' value='1'/><br>
+            return " <div class='add_item_prod'><input type='number' id='quantitymodal' name='quantity' placeholder='Inserisci quantità'/>
  <button id='aggiungicarrello' class='btn btn-primary'>Aggiungi al carrello</button></div>
 
 <script type='application/javascript'>

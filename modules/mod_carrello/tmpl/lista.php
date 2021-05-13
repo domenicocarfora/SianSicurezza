@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 ?>
-<div class="carrello"><p><a class="btn" data-target="#itemcarrello" role="button" data-toggle="modal" data-backdrop="static" data-keyboard="false">
+<div class="carrello"><p><a class="btn" data-target="#itemcarrello_mod" role="button" data-toggle="modal" data-backdrop="static" data-keyboard="false">
             <?php if(count($carrello)>0){
                 echo "<span class='contcarrello'>".count($carrello)."</span>";
             } ?>
@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
         </a></p>
 </div>
 
-<div id="itemcarrello" class="modal fade in" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
+<div id="itemcarrello_mod" class="modal fade in" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-content">
         <div class="modal-body">
             <?php if(count($carrello)>0){
