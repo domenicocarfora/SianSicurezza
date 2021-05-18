@@ -46,7 +46,9 @@ class Item_everywhere_apiModelItems extends JModelList
         $items = $db->loadObjectList();
         $items_def=array();
         foreach ($items as $item){
-            $item->short_desc=str_replace('\r\n',' ',$item->short_desc);
+            $pat=array('\r\n','\\','u00b0');
+            $rep=array('','','°');
+            $item->short_desc=str_replace($pat,$rep,$item->short_desc);
             $items_def[]=$item;
         }
         return $items_def;
